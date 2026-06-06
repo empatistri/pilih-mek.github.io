@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Suluh Kusuma H. — DEKAVE Boys</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style2.css" />
+    </head>
+    <body>
+        <!-- ─ NAVBAR ─────────────────────────────────────────────────── -->
+        <nav class="navbar navbar-expand-md sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#" onclick="go('home')"
+                    >Suluh Kusuma H.<span>.</span></a
+                >
+                <button
+                    class="navbar-toggler border-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navMenu"
+                >
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto gap-md-1">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                href="#"
+                                onclick="go('home')"
+                                data-p="home"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                onclick="go('about')"
+                                data-p="about"
+                                >About</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                onclick="go('portfolio')"
+                                data-p="portfolio"
+                                >Portfolio</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                onclick="go('gallery')"
+                                data-p="gallery"
+                                >Gallery</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                onclick="go('contact')"
+                                data-p="contact"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ─ HOME ───────────────────────────────────────────────────── -->
+        <div class="page active" id="home">
+            <div class="hero-wrap">
+                <div class="container py-5">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-7">
+                            <p class="hero-eyebrow mb-3">
+                                Desain Komunikasi Visual
+                            </p>
+                            <h1 class="hero-title mb-4">
+                                Bercerita<br />
+                                <em>lewat visual.</em>
+                            </h1>
+                            <p class="hero-sub mb-4">
+                                Halo, saya Suluh mahasiswa DKV yang percaya
+                                bahwa desain yang baik tidak hanya terlihat
+                                indah, tapi juga berbicara kepada audiensnya.
+                            </p>
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a
+                                    href="#"
+                                    onclick="go('portfolio')"
+                                    class="btn-dark-custom"
+                                    >Lihat Karya</a
+                                >
+                                <a
+                                    href="#"
+                                    onclick="go('contact')"
+                                    class="btn-outline-custom"
+                                    >Hubungi Saya</a
+                                >
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block">
+                            <div class="about-img w-100">
+                                <img
+                                    src="data:image/webp;base64,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"
+                                    alt="About"
+                                    class="w-100"
+                                    style="aspect-ratio: 4/5; object-fit: cover"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick info strip -->
+            <div class="container section-sm">
+                <div class="row g-4 text-center text-md-start">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-num">2400+</div>
+                        <div class="stat-label">Proyek Selesai</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-num">6000+</div>
+                        <div class="stat-label">Pameran Diikuti</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-num">3000+</div>
+                        <div class="stat-label">Penghargaan</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-num">1945</div>
+                        <div class="stat-label">Angkatan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─ ABOUT ──────────────────────────────────────────────────── -->
+        <div class="page" id="about">
+            <div class="container section">
+                <div class="row g-5 align-items-center">
+                    <div class="col-md-4">
+                        <div class="about-img">
+                            <img
+                                src="data:image/webp;base64,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"
+                                alt="About"
+                                class="w-100"
+                                style="aspect-ratio: 4/5; object-fit: cover"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="section-label mb-2">Tentang Saya</p>
+                        <h2 class="section-title mb-3">Suluh Kusuma H.</h2>
+                        <div class="divider mb-4"></div>
+                        <p class="text-muted mb-3" style="line-height: 1.8">
+                            Mahasiswi Desain Komunikasi Visual angkatan 2022.
+                            Spesialisasi saya ada di <strong>branding</strong>,
+                            <strong>ilustrasi digital</strong>, dan
+                            <strong>desain editorial</strong>. Saya percaya
+                            setiap karya visual punya tanggung jawab untuk
+                            menyampaikan pesan dengan jelas dan berkesan.
+                        </p>
+                        <p class="text-muted mb-4" style="line-height: 1.8">
+                            Di luar kampus, saya aktif mengikuti pameran seni
+                            lokal dan sesekali menerima proyek freelance untuk
+                            brand lokal. Desain bagi saya bukan sekadar estetika
+                            — tapi solusi.
+                        </p>
+                        <p class="section-label mb-2">Keahlian</p>
+                        <div class="mb-4">
+                            <span class="skill-tag">Adobe Illustrator</span>
+                            <span class="skill-tag">Photoshop</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Ilustrasi</span>
+                        </div>
+                        <a
+                            href="#"
+                            onclick="go('contact')"
+                            class="btn-dark-custom"
+                            >Mari Berkolaborasi</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─ PORTFOLIO ───────────────────────────────────────────────── -->
+        <div class="page" id="portfolio">
+            <div class="section" id="portfolio">
+                <div class="container">
+                    <div
+                        class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5"
+                    >
+                        <div>
+                            <p class="section-label mb-1">Karya Pilihan</p>
+                            <h2 class="section-title mb-0">Portfolio</h2>
+                        </div>
+                    </div>
+
+                    <div class="row g-4" id="pfGrid">
+                        <div
+                            class="col-md-6 col-lg-4 pf-card-wrap"
+                            data-cat="branding"
+                        >
+                            <div class="pf-card">
+                                <div class="pf-thumb thumb-1">✦</div>
+                                <div class="p-3">
+                                    <div class="pf-cat">Branding</div>
+                                    <div class="pf-title">
+                                        Kopi Rimba — Brand Identity
+                                    </div>
+                                    <div class="pf-year">2024</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-md-6 col-lg-4 pf-card-wrap"
+                            data-cat="ui"
+                        >
+                            <div class="pf-card">
+                                <div class="pf-thumb thumb-2">◈</div>
+                                <div class="p-3">
+                                    <div class="pf-cat">UI/UX</div>
+                                    <div class="pf-title">
+                                        Nusantara App — Mobile Design
+                                    </div>
+                                    <div class="pf-year">2024</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-md-6 col-lg-4 pf-card-wrap"
+                            data-cat="ilustrasi"
+                        >
+                            <div class="pf-card">
+                                <div class="pf-thumb thumb-3">❋</div>
+                                <div class="p-3">
+                                    <div class="pf-cat">Ilustrasi</div>
+                                    <div class="pf-title">
+                                        Seri Wayang Modern
+                                    </div>
+                                    <div class="pf-year">2023</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-md-6 col-lg-4 pf-card-wrap"
+                            data-cat="branding"
+                        >
+                            <div class="pf-card">
+                                <div class="pf-thumb thumb-4">◉</div>
+                                <div class="p-3">
+                                    <div class="pf-cat">Branding</div>
+                                    <div class="pf-title">
+                                        Batik Muda — Rebranding
+                                    </div>
+                                    <div class="pf-year">2023</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-md-6 col-lg-4 pf-card-wrap"
+                            data-cat="ilustrasi"
+                        >
+                            <div class="pf-card">
+                                <div class="pf-thumb thumb-5">⊕</div>
+                                <div class="p-3">
+                                    <div class="pf-cat">Ilustrasi</div>
+                                    <div class="pf-title">
+                                        Fauna Nusantara Poster Series
+                                    </div>
+                                    <div class="pf-year">2023</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-md-6 col-lg-4 pf-card-wrap"
+                            data-cat="ui"
+                        >
+                            <div class="pf-card">
+                                <div class="pf-thumb thumb-6">◬</div>
+                                <div class="p-3">
+                                    <div class="pf-cat">UI/UX</div>
+                                    <div class="pf-title">
+                                        Pasar Digital — E-Commerce Redesign
+                                    </div>
+                                    <div class="pf-year">2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─ GALLERY ─────────────────────────────────────────────────── -->
+        <div class="page" id="gallery">
+            <div class="container section">
+                <p class="section-label mb-1">Eksplorasi Visual</p>
+                <h2 class="section-title mb-5">Gallery</h2>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4">
+                        <div class="gal-item">
+                            <div class="gal-thumb" style="background: #2c1810">
+                                ✦
+                            </div>
+                            <div class="gal-caption">
+                                Eksplorasi Warna — 2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="gal-item">
+                            <div class="gal-thumb" style="background: #1a2744">
+                                ◈
+                            </div>
+                            <div class="gal-caption">
+                                Pattern Batik Digital — 2023
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="gal-item">
+                            <div class="gal-thumb" style="background: #2a3d1e">
+                                Aa
+                            </div>
+                            <div class="gal-caption">
+                                Studi Tipografi — 2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="gal-item">
+                            <div class="gal-thumb" style="background: #4a1f3d">
+                                ❋
+                            </div>
+                            <div class="gal-caption">
+                                Karakter Ilustrasi — 2023
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="gal-item">
+                            <div class="gal-thumb" style="background: #3d2e10">
+                                ◉
+                            </div>
+                            <div class="gal-caption">Poster Event — 2024</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="gal-item">
+                            <div class="gal-thumb" style="background: #1c3040">
+                                ⊕
+                            </div>
+                            <div class="gal-caption">Mural Concept — 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─ CONTACT ─────────────────────────────────────────────────── -->
+        <div class="page" id="contact">
+            <div class="section">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-md-5">
+                            <p class="section-label mb-2">Mari Berkolaborasi</p>
+                            <h2 class="section-title mb-3" style="color: #fff">
+                                Ada project menarik?
+                            </h2>
+                            <div
+                                class="divider mb-4"
+                                style="background: #c4a080"
+                            ></div>
+                            <p
+                                style="
+                                    color: rgba(255, 255, 255, 0.55);
+                                    line-height: 1.8;
+                                    font-size: 0.9rem;
+                                    margin-bottom: 2rem;
+                                "
+                            >
+                                Saya terbuka untuk proyek freelance, kolaborasi
+                                kreatif, maupun sekadar ngobrol soal desain.
+                                Jangan ragu menghubungi!
+                            </p>
+                            <a
+                                class="contact-info-item d-flex"
+                                href="mailto:suluh@email.com"
+                            >
+                                <i class="bi bi-envelope"></i>
+                                suluh.kusumae@email.com
+                            </a>
+                            <a class="contact-info-item d-flex" href="#">
+                                <i class="bi bi-instagram"></i> @suluh.designs
+                            </a>
+                            <a class="contact-info-item d-flex" href="#">
+                                <i class="bi bi-linkedin"></i> Suluh Kusuma
+                                Endang
+                            </a>
+                            <a class="contact-info-item d-flex" href="#">
+                                <i class="bi bi-behance"></i>
+                                behance.net/suluh
+                            </a>
+                        </div>
+                        <div class="col-md-7">
+                            <form onsubmit="sendMsg(event)">
+                                <div class="mb-3">
+                                    <label class="form-lbl">Nama</label>
+                                    <input
+                                        type="text"
+                                        class="form-ctrl"
+                                        placeholder="Nama kamu"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-lbl">Email</label>
+                                    <input
+                                        type="email"
+                                        class="form-ctrl"
+                                        placeholder="email@contoh.com"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-lbl">Pesan</label>
+                                    <textarea
+                                        class="form-ctrl"
+                                        placeholder="Ceritakan proyekmu…"
+                                        required
+                                    ></textarea>
+                                </div>
+                                <button
+                                    type="submit"
+                                    class="btn-send"
+                                    id="sendBtn"
+                                >
+                                    Kirim Pesan →
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>© 2025 Suluh Kusuma H. — DKV Portfolio</footer>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- script custom -->
+        <script src="js/script2.js"></script>
+    </body>
+</html>

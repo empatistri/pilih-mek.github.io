@@ -1,0 +1,406 @@
+:root {
+    --cream: #f8f5f0;
+    --ink: #1c1c1a;
+    --muted: #6b6b67;
+    --accent: #b85c2a;
+    --border: #e2ddd6;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+}
+
+/* ── Typography ── */
+h1,
+h2,
+h3,
+.serif {
+    font-family: "Cormorant Garamond", serif;
+}
+
+/* ── Navbar ── */
+.navbar {
+    background: rgba(248, 245, 240, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+}
+.navbar-brand {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ink) !important;
+    letter-spacing: 0.02em;
+}
+.navbar-brand span {
+    color: var(--accent);
+}
+.nav-link {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted) !important;
+    transition: color 0.2s;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: var(--ink) !important;
+}
+.nav-link.active {
+    border-bottom: 1.5px solid var(--accent);
+}
+
+/* ── Sections (SPA) ── */
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+
+/* ── Hero ── */
+#home {
+    min-height: 100vh;
+    padding-top: 56px;
+}
+.hero-wrap {
+    min-height: calc(100vh - 56px);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+.hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+.hero-title {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+}
+.hero-title em {
+    color: var(--accent);
+}
+.hero-sub {
+    color: var(--muted);
+    max-width: 420px;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+.divider {
+    width: 40px;
+    height: 1.5px;
+    background: var(--accent);
+}
+
+/* ── Buttons ── */
+.btn-dark-custom {
+    background: var(--ink);
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.7rem 1.8rem;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+.btn-dark-custom:hover {
+    background: var(--accent);
+    color: #fff;
+}
+.btn-outline-custom {
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--border);
+    border-radius: 0;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.7rem 1.8rem;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+.btn-outline-custom:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ── Section layout ── */
+.section {
+    padding: 5rem 0;
+}
+.section-sm {
+    padding: 4rem 0;
+}
+.section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+.section-title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 400;
+}
+
+/* ── About ── */
+.about-img {
+    aspect-ratio: 4/5;
+    background: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--accent);
+    opacity: 0.3;
+}
+.skill-tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--border);
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin: 0.25rem;
+    transition: all 0.2s;
+}
+.skill-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+.stat-num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+}
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
+}
+
+/* ── Portfolio ── */
+#portfolio {
+    background: #f2ede5;
+}
+.filter-btn {
+    background: none;
+    border: 1px solid var(--border);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0.35rem 1rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    border-radius: 0;
+}
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: #fff;
+}
+.pf-card {
+    background: var(--cream);
+    overflow: hidden;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+.pf-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+.pf-thumb {
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.15);
+}
+.pf-cat {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+.pf-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.pf-year {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+.pf-card.hidden {
+    display: none;
+}
+
+/* Thumb colors */
+.thumb-1 {
+    background: #2c1810;
+}
+.thumb-2 {
+    background: #1a2744;
+}
+.thumb-3 {
+    background: #2a3d1e;
+}
+.thumb-4 {
+    background: #3d2010;
+}
+.thumb-5 {
+    background: #1c3040;
+}
+.thumb-6 {
+    background: #3a1040;
+}
+
+/* ── Gallery ── */
+.gal-item {
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+.gal-thumb {
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.12);
+    transition: transform 0.4s;
+}
+.gal-item:hover .gal-thumb {
+    transform: scale(1.04);
+}
+.gal-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 1.5rem 0.8rem 0.6rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.gal-item:hover .gal-caption {
+    opacity: 1;
+}
+
+/* ── Contact ── */
+#contact {
+    background: var(--ink);
+}
+#contact .section-label {
+    color: #c4a080;
+}
+#contact .section-title {
+    color: #fff;
+}
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.88rem;
+    transition: all 0.2s;
+    margin-bottom: 0.6rem;
+}
+.contact-info-item:hover {
+    border-color: #c4a080;
+    color: #fff;
+    padding-left: 1.5rem;
+}
+.contact-info-item i {
+    color: #c4a080;
+    font-size: 1rem;
+    width: 20px;
+}
+.form-ctrl {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 0;
+    padding: 0.75rem 1rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.9rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.form-ctrl:focus {
+    border-color: #c4a080;
+    background: rgba(255, 255, 255, 0.07);
+}
+.form-ctrl::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+textarea.form-ctrl {
+    min-height: 120px;
+    resize: none;
+}
+.form-lbl {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+    margin-bottom: 0.35rem;
+    display: block;
+}
+.btn-send {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.75rem 2rem;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+.btn-send:hover {
+    background: #c4a080;
+}
+
+/* ── Footer ── */
+footer {
+    background: var(--ink);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+/* ── Misc ── */
+hr.thin {
+    border-color: var(--border);
+    opacity: 1;
+}

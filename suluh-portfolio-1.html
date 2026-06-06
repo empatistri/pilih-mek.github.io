@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Anya Saraswati — DKV Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style1.css" />
+    </head>
+    <body>
+        <!-- Cursor -->
+        <div id="cursor"></div>
+        <div id="cursor-ring"></div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a
+                href="#"
+                onclick="
+                    navigate('home');
+                    closeMobile();
+                "
+                >Home</a
+            >
+            <a
+                href="#"
+                onclick="
+                    navigate('about');
+                    closeMobile();
+                "
+                >About</a
+            >
+            <a
+                href="#"
+                onclick="
+                    navigate('portfolio');
+                    closeMobile();
+                "
+                >Portfolio</a
+            >
+            <a
+                href="#"
+                onclick="
+                    navigate('gallery');
+                    closeMobile();
+                "
+                >Gallery</a
+            >
+            <a
+                href="#"
+                onclick="
+                    navigate('contact');
+                    closeMobile();
+                "
+                >Contact</a
+            >
+        </div>
+
+        <!-- Nav -->
+        <nav id="navbar">
+            <a class="nav-logo" href="#" onclick="navigate('home')"
+                >A<span>.</span>Saraswati</a
+            >
+            <ul class="nav-links" id="navLinks">
+                <li>
+                    <a
+                        href="#"
+                        onclick="navigate('home')"
+                        data-page="home"
+                        class="active"
+                        >Home</a
+                    >
+                </li>
+                <li>
+                    <a href="#" onclick="navigate('about')" data-page="about"
+                        >About</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        onclick="navigate('portfolio')"
+                        data-page="portfolio"
+                        >Portfolio</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        onclick="navigate('gallery')"
+                        data-page="gallery"
+                        >Gallery</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        onclick="navigate('contact')"
+                        data-page="contact"
+                        >Contact</a
+                    >
+                </li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+
+        <!-- ══ HOME ══════════════════════════════════════════════════════ -->
+        <div class="page active" id="home">
+            <section
+                id="home-sec"
+                style="
+                    min-height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    position: relative;
+                    overflow: hidden;
+                "
+            >
+                <div class="hero-bg"></div>
+                <div class="hero-grid"></div>
+                <div class="hero-inner">
+                    <div class="hero-label">DKV — Desain Komunikasi Visual</div>
+                    <h1 class="hero-title">
+                        Bercerita<br />
+                        <em>lewat visual.</em>
+                    </h1>
+                    <p class="hero-sub">
+                        Halo! Saya Anya, mahasiswa DKV yang percaya bahwa desain
+                        yang baik bukan hanya terlihat indah — tapi juga
+                        berbicara dan dirasakan.
+                    </p>
+                    <div class="hero-ctas">
+                        <a
+                            class="btn btn-primary"
+                            href="#"
+                            onclick="navigate('portfolio')"
+                        >
+                            Lihat Karya
+                            <span>→</span>
+                        </a>
+                        <a
+                            class="btn btn-outline"
+                            href="#"
+                            onclick="navigate('contact')"
+                        >
+                            Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-scroll">
+                    <div class="hero-scroll-line"></div>
+                    <span>Scroll</span>
+                </div>
+                <!-- Rotating badge -->
+                <div class="hero-badge">
+                    <svg
+                        viewBox="0 0 110 110"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <defs>
+                            <path
+                                id="circle"
+                                d="M 55,55 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                            />
+                        </defs>
+                        <text
+                            font-family="'DM Mono',monospace"
+                            font-size="9"
+                            letter-spacing="3"
+                            fill="#4A4540"
+                        >
+                            <textPath href="#circle">
+                                DKV PORTFOLIO ✦ VISUAL DESIGN ✦
+                            </textPath>
+                        </text>
+                        <circle
+                            cx="55"
+                            cy="55"
+                            r="18"
+                            fill="none"
+                            stroke="#C4622D"
+                            stroke-width="1.5"
+                        />
+                        <text
+                            x="55"
+                            y="60"
+                            text-anchor="middle"
+                            font-family="'Playfair Display',serif"
+                            font-size="16"
+                            font-weight="900"
+                            fill="#C4622D"
+                        >
+                            A
+                        </text>
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Quick preview strip -->
+            <section style="padding: 5rem 0; background: var(--bg2)">
+                <div class="container">
+                    <div
+                        style="
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            gap: 2rem;
+                            border-top: 1px solid var(--line);
+                            padding-top: 3rem;
+                        "
+                    >
+                        <div class="reveal">
+                            <div
+                                style="
+                                    font-family: var(--f-mono);
+                                    font-size: 0.7rem;
+                                    letter-spacing: 0.15em;
+                                    text-transform: uppercase;
+                                    color: var(--ink2);
+                                    margin-bottom: 0.5rem;
+                                "
+                            >
+                                Keahlian Utama
+                            </div>
+                            <div
+                                style="
+                                    font-family: var(--f-display);
+                                    font-size: 1.1rem;
+                                    font-weight: 700;
+                                "
+                            >
+                                Branding · Ilustrasi · UI/UX
+                            </div>
+                        </div>
+                        <div class="reveal reveal-delay-1">
+                            <div
+                                style="
+                                    font-family: var(--f-mono);
+                                    font-size: 0.7rem;
+                                    letter-spacing: 0.15em;
+                                    text-transform: uppercase;
+                                    color: var(--ink2);
+                                    margin-bottom: 0.5rem;
+                                "
+                            >
+                                Institusi
+                            </div>
+                            <div
+                                style="
+                                    font-family: var(--f-display);
+                                    font-size: 1.1rem;
+                                    font-weight: 700;
+                                "
+                            >
+                                Universitas Kreatif Nusantara
+                            </div>
+                        </div>
+                        <div class="reveal reveal-delay-2">
+                            <div
+                                style="
+                                    font-family: var(--f-mono);
+                                    font-size: 0.7rem;
+                                    letter-spacing: 0.15em;
+                                    text-transform: uppercase;
+                                    color: var(--ink2);
+                                    margin-bottom: 0.5rem;
+                                "
+                            >
+                                Tahun
+                            </div>
+                            <div
+                                style="
+                                    font-family: var(--f-display);
+                                    font-size: 1.1rem;
+                                    font-weight: 700;
+                                "
+                            >
+                                Angkatan 2022
+                            </div>
+                        </div>
+                        <div class="reveal reveal-delay-3">
+                            <a
+                                class="btn btn-primary"
+                                href="#"
+                                onclick="navigate('portfolio')"
+                                style="margin-top: 0"
+                                >Eksplorasi Karya →</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ══ ABOUT ══════════════════════════════════════════════════════ -->
+        <div class="page" id="about">
+            <section style="padding: 7rem 0">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-img-wrap">
+                            <div class="about-img-frame">
+                                <div class="about-img-placeholder">A</div>
+                            </div>
+                            <div class="about-img-frame-border"></div>
+                            <div class="about-tag">DKV '22</div>
+                        </div>
+                        <div>
+                            <div class="section-label reveal">Tentang Saya</div>
+                            <h2 class="section-title reveal reveal-delay-1">
+                                Mahasiswi DKV<br />yang
+                                <em
+                                    style="
+                                        font-style: italic;
+                                        color: var(--accent);
+                                    "
+                                    >jatuh cinta</em
+                                ><br />pada tipografi.
+                            </h2>
+                            <p class="about-bio reveal reveal-delay-2">
+                                Nama saya <strong>Anya Saraswati</strong>,
+                                mahasiswi Desain Komunikasi Visual angkatan
+                                2022. Saya percaya bahwa setiap titik, garis,
+                                dan warna punya cerita untuk diceritakan.
+                                Spesialisasi saya ada di branding, ilustrasi
+                                digital, dan desain editorial.
+                            </p>
+                            <p
+                                class="about-bio reveal reveal-delay-2"
+                                style="margin-top: -0.8rem"
+                            >
+                                Di luar kampus, saya aktif mengikuti pameran
+                                seni lokal dan sesekali menerima project
+                                freelance kecil-kecilan untuk brand lokal. Saya
+                                percaya desain yang baik lahir dari rasa ingin
+                                tahu yang tak pernah padam.
+                            </p>
+                            <div class="skills-list reveal reveal-delay-3">
+                                <span class="skill-tag">Adobe Illustrator</span>
+                                <span class="skill-tag">Photoshop</span>
+                                <span class="skill-tag">Figma</span>
+                                <span class="skill-tag">Procreate</span>
+                                <span class="skill-tag">InDesign</span>
+                                <span class="skill-tag">Branding</span>
+                                <span class="skill-tag">Tipografi</span>
+                                <span class="skill-tag">Ilustrasi</span>
+                                <span class="skill-tag">Motion Design</span>
+                            </div>
+                            <div class="stats-row reveal reveal-delay-4">
+                                <div class="stat-item">
+                                    <div class="stat-num">24+</div>
+                                    <div class="stat-label">Proyek Selesai</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-num">6</div>
+                                    <div class="stat-label">
+                                        Pameran Diikuti
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-num">3</div>
+                                    <div class="stat-label">Penghargaan</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ══ PORTFOLIO ══════════════════════════════════════════════════ -->
+        <div class="page" id="portfolio">
+            <section style="padding: 7rem 0; background: var(--bg2)">
+                <div class="container">
+                    <div class="portfolio-header">
+                        <div>
+                            <div class="section-label reveal">
+                                Karya Pilihan
+                            </div>
+                            <h2 class="section-title reveal reveal-delay-1">
+                                Portfolio
+                            </h2>
+                        </div>
+                        <div class="filter-tabs reveal reveal-delay-2">
+                            <button
+                                class="filter-btn active"
+                                onclick="filterPortfolio('all', this)"
+                            >
+                                Semua
+                            </button>
+                            <button
+                                class="filter-btn"
+                                onclick="filterPortfolio('branding', this)"
+                            >
+                                Branding
+                            </button>
+                            <button
+                                class="filter-btn"
+                                onclick="filterPortfolio('ilustrasi', this)"
+                            >
+                                Ilustrasi
+                            </button>
+                            <button
+                                class="filter-btn"
+                                onclick="filterPortfolio('ui', this)"
+                            >
+                                UI/UX
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-grid" id="portfolioGrid">
+                        <div class="pf-card reveal" data-cat="branding">
+                            <div class="pf-thumb">
+                                <div class="pf-thumb-bg">✦</div>
+                                <div class="pf-overlay">
+                                    <div class="pf-overlay-icon">↗</div>
+                                </div>
+                            </div>
+                            <div class="pf-info">
+                                <div class="pf-cat">Branding</div>
+                                <div class="pf-title">
+                                    Kopi Rimba — Brand Identity
+                                </div>
+                                <div class="pf-year">2024</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="pf-card reveal reveal-delay-1"
+                            data-cat="ui"
+                        >
+                            <div class="pf-thumb">
+                                <div class="pf-thumb-bg">◈</div>
+                                <div class="pf-overlay">
+                                    <div class="pf-overlay-icon">↗</div>
+                                </div>
+                            </div>
+                            <div class="pf-info">
+                                <div class="pf-cat">UI/UX</div>
+                                <div class="pf-title">
+                                    Nusantara App — Mobile Design
+                                </div>
+                                <div class="pf-year">2024</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="pf-card reveal reveal-delay-2"
+                            data-cat="ilustrasi"
+                        >
+                            <div class="pf-thumb">
+                                <div class="pf-thumb-bg">❋</div>
+                                <div class="pf-overlay">
+                                    <div class="pf-overlay-icon">↗</div>
+                                </div>
+                            </div>
+                            <div class="pf-info">
+                                <div class="pf-cat">Ilustrasi</div>
+                                <div class="pf-title">Seri Wayang Modern</div>
+                                <div class="pf-year">2023</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="pf-card reveal reveal-delay-3"
+                            data-cat="branding"
+                        >
+                            <div class="pf-thumb">
+                                <div class="pf-thumb-bg">◉</div>
+                                <div class="pf-overlay">
+                                    <div class="pf-overlay-icon">↗</div>
+                                </div>
+                            </div>
+                            <div class="pf-info">
+                                <div class="pf-cat">Branding</div>
+                                <div class="pf-title">
+                                    Batik Muda — Rebranding
+                                </div>
+                                <div class="pf-year">2023</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="pf-card reveal reveal-delay-4"
+                            data-cat="ilustrasi"
+                        >
+                            <div class="pf-thumb">
+                                <div class="pf-thumb-bg">⊕</div>
+                                <div class="pf-overlay">
+                                    <div class="pf-overlay-icon">↗</div>
+                                </div>
+                            </div>
+                            <div class="pf-info">
+                                <div class="pf-cat">Ilustrasi</div>
+                                <div class="pf-title">
+                                    Fauna Nusantara Poster Series
+                                </div>
+                                <div class="pf-year">2023</div>
+                            </div>
+                        </div>
+
+                        <div class="pf-card reveal" data-cat="ui">
+                            <div class="pf-thumb">
+                                <div class="pf-thumb-bg">◬</div>
+                                <div class="pf-overlay">
+                                    <div class="pf-overlay-icon">↗</div>
+                                </div>
+                            </div>
+                            <div class="pf-info">
+                                <div class="pf-cat">UI/UX</div>
+                                <div class="pf-title">
+                                    Pasar Digital — E-Commerce Redesign
+                                </div>
+                                <div class="pf-year">2024</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="pf-card reveal reveal-delay-1"
+                            data-cat="branding"
+                        >
+                            <div class="pf-thumb">
+                                <div class="pf-thumb-bg">✺</div>
+                                <div class="pf-overlay">
+                                    <div class="pf-overlay-icon">↗</div>
+                                </div>
+                            </div>
+                            <div class="pf-info">
+                                <div class="pf-cat">Branding</div>
+                                <div class="pf-title">
+                                    Taman Sari Café — Visual Identity
+                                </div>
+                                <div class="pf-year">2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ══ GALLERY ════════════════════════════════════════════════════ -->
+        <div class="page" id="gallery">
+            <section style="padding: 7rem 0">
+                <div class="container">
+                    <div class="section-label reveal">Eksplorasi Visual</div>
+                    <h2
+                        class="section-title reveal reveal-delay-1"
+                        style="margin-bottom: 3rem"
+                    >
+                        Gallery
+                    </h2>
+                    <div class="gallery-grid" id="galleryGrid">
+                        <div
+                            class="gal-item reveal"
+                            onclick="openLightbox(this)"
+                            data-caption="Eksplorasi Warna — 2024"
+                        >
+                            <div
+                                class="gal-rect"
+                                style="
+                                    aspect-ratio: 1/1;
+                                    background: linear-gradient(
+                                        145deg,
+                                        #c4622d,
+                                        #8b3a20
+                                    );
+                                "
+                            >
+                                ✦
+                            </div>
+                            <div class="gal-caption">
+                                Eksplorasi Warna — 2024
+                            </div>
+                        </div>
+
+                        <div
+                            class="gal-item reveal reveal-delay-1"
+                            onclick="openLightbox(this)"
+                            data-caption="Pattern Batik Digital — 2023"
+                        >
+                            <div
+                                class="gal-rect"
+                                style="
+                                    aspect-ratio: 4/5;
+                                    background: linear-gradient(
+                                        145deg,
+                                        #1a2744,
+                                        #4a7bc8
+                                    );
+                                "
+                            >
+                                ◈
+                            </div>
+                            <div class="gal-caption">
+                                Pattern Batik Digital — 2023
+                            </div>
+                        </div>
+
+                        <div
+                            class="gal-item reveal reveal-delay-2"
+                            onclick="openLightbox(this)"
+                            data-caption="Studi Tipografi — 2024"
+                        >
+                            <div
+                                class="gal-rect"
+                                style="
+                                    aspect-ratio: 3/4;
+                                    background: linear-gradient(
+                                        145deg,
+                                        #2a3d1e,
+                                        #6a9b50
+                                    );
+                                "
+                            >
+                                Aa
+                            </div>
+                            <div class="gal-caption">
+                                Studi Tipografi — 2024
+                            </div>
+                        </div>
+
+                        <div
+                            class="gal-item reveal"
+                            onclick="openLightbox(this)"
+                            data-caption="Karakter Ilustrasi — 2023"
+                        >
+                            <div
+                                class="gal-rect"
+                                style="
+                                    aspect-ratio: 3/4;
+                                    background: linear-gradient(
+                                        145deg,
+                                        #4a1f3d,
+                                        #9b5590
+                                    );
+                                "
+                            >
+                                ❋
+                            </div>
+                            <div class="gal-caption">
+                                Karakter Ilustrasi — 2023
+                            </div>
+                        </div>
+
+                        <div
+                            class="gal-item reveal reveal-delay-1"
+                            onclick="openLightbox(this)"
+                            data-caption="Poster Event — 2024"
+                        >
+                            <div
+                                class="gal-rect"
+                                style="
+                                    aspect-ratio: 1/1;
+                                    background: linear-gradient(
+                                        145deg,
+                                        #3d2e10,
+                                        #c4a040
+                                    );
+                                "
+                            >
+                                ◉
+                            </div>
+                            <div class="gal-caption">Poster Event — 2024</div>
+                        </div>
+
+                        <div
+                            class="gal-item reveal reveal-delay-2"
+                            onclick="openLightbox(this)"
+                            data-caption="Mural Concept — 2024"
+                        >
+                            <div
+                                class="gal-rect"
+                                style="
+                                    aspect-ratio: 16/9;
+                                    background: linear-gradient(
+                                        145deg,
+                                        #1c3040,
+                                        #3a7090
+                                    );
+                                "
+                            >
+                                ⊕
+                            </div>
+                            <div class="gal-caption">Mural Concept — 2024</div>
+                        </div>
+
+                        <div
+                            class="gal-item reveal"
+                            onclick="openLightbox(this)"
+                            data-caption="Logo Sketch Series — 2023"
+                        >
+                            <div
+                                class="gal-rect"
+                                style="
+                                    aspect-ratio: 4/3;
+                                    background: linear-gradient(
+                                        145deg,
+                                        #3a1a10,
+                                        #c4622d
+                                    );
+                                "
+                            >
+                                ◬
+                            </div>
+                            <div class="gal-caption">
+                                Logo Sketch Series — 2023
+                            </div>
+                        </div>
+
+                        <div
+                            class="gal-item reveal reveal-delay-1"
+                            onclick="openLightbox(this)"
+                            data-caption="Motion Study — 2024"
+                        >
+                            <div
+                                class="gal-rect"
+                                style="
+                                    aspect-ratio: 1/1;
+                                    background: linear-gradient(
+                                        145deg,
+                                        #1a2010,
+                                        #4a6a20
+                                    );
+                                "
+                            >
+                                ✺
+                            </div>
+                            <div class="gal-caption">Motion Study — 2024</div>
+                        </div>
+
+                        <div
+                            class="gal-item reveal reveal-delay-2"
+                            onclick="openLightbox(this)"
+                            data-caption="Packaging Design — 2024"
+                        >
+                            <div
+                                class="gal-rect"
+                                style="
+                                    aspect-ratio: 3/4;
+                                    background: linear-gradient(
+                                        145deg,
+                                        #3d1040,
+                                        #8b30a0
+                                    );
+                                "
+                            >
+                                ✦
+                            </div>
+                            <div class="gal-caption">
+                                Packaging Design — 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ══ CONTACT ════════════════════════════════════════════════════ -->
+        <div class="page" id="contact">
+            <section style="padding: 7rem 0; background: var(--ink)">
+                <div class="container">
+                    <div class="contact-grid">
+                        <div>
+                            <div class="section-label reveal">
+                                Mari Berkolaborasi
+                            </div>
+                            <h2 class="section-title reveal reveal-delay-1">
+                                Ada project<br />
+                                <span
+                                    style="
+                                        color: var(--accent2);
+                                        font-style: italic;
+                                        font-family: var(--f-display);
+                                    "
+                                    >menarik?</span
+                                >
+                            </h2>
+                            <p class="contact-text reveal reveal-delay-2">
+                                Saya terbuka untuk proyek freelance, kolaborasi
+                                kreatif, maupun sekadar ngobrol soal desain.
+                                Jangan ragu untuk menghubungi saya!
+                            </p>
+                            <div class="contact-links reveal reveal-delay-3">
+                                <a
+                                    class="contact-link"
+                                    href="mailto:anya@email.com"
+                                >
+                                    <div class="contact-link-icon">✉</div>
+                                    <div class="contact-link-info">
+                                        <div class="contact-link-label">
+                                            Email
+                                        </div>
+                                        <div class="contact-link-value">
+                                            anya.saraswati@email.com
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="contact-link" href="#">
+                                    <div class="contact-link-icon">📷</div>
+                                    <div class="contact-link-info">
+                                        <div class="contact-link-label">
+                                            Instagram
+                                        </div>
+                                        <div class="contact-link-value">
+                                            @anya.designs
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="contact-link" href="#">
+                                    <div class="contact-link-icon">💼</div>
+                                    <div class="contact-link-info">
+                                        <div class="contact-link-label">
+                                            LinkedIn
+                                        </div>
+                                        <div class="contact-link-value">
+                                            Anya Saraswati
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="contact-link" href="#">
+                                    <div class="contact-link-icon">🎨</div>
+                                    <div class="contact-link-info">
+                                        <div class="contact-link-label">
+                                            Behance
+                                        </div>
+                                        <div class="contact-link-value">
+                                            behance.net/anyasaraswati
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="reveal reveal-delay-2">
+                            <form
+                                class="contact-form"
+                                onsubmit="handleSubmit(event)"
+                            >
+                                <div class="form-group">
+                                    <label class="form-label">Nama</label>
+                                    <input
+                                        type="text"
+                                        class="form-input"
+                                        placeholder="Nama kamu"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input
+                                        type="email"
+                                        class="form-input"
+                                        placeholder="email@contoh.com"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Pesan</label>
+                                    <textarea
+                                        class="form-textarea"
+                                        placeholder="Ceritakan proyekmu…"
+                                        required
+                                    ></textarea>
+                                </div>
+                                <button type="submit" class="btn-send">
+                                    Kirim Pesan →
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <span class="footer-copy"
+                    >© 2025 Anya Saraswati — DKV Portfolio</span
+                >
+                <a class="footer-back" href="#" onclick="navigate('home')"
+                    >↑ Kembali ke atas</a
+                >
+            </footer>
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" onclick="closeLightbox()">
+            <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+            <div id="lightbox-content"></div>
+            <div id="lightbox-caption"></div>
+        </div>
+        <script src="js/script1.js"></script>
+    </body>
+</html>
