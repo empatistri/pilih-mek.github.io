@@ -7,45 +7,56 @@ a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #f9fafb;
 }
+
 body {
   background-color: #0a0f1c;
 }
+
 nav {
   background-color: #0a0f1c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 3rem;
+  border-bottom: 1px solid #1f2937;
 }
+
 nav ul {
   display: flex;
   align-items: center;
   list-style: none;
   gap: 2rem;
 }
+
 nav ul li a {
   font-weight: 500;
   padding: 8px 0;
 }
+
 nav ul li a:hover {
   border-bottom: 1px solid #60a5fa;
   color: #60a5fa;
 }
+
 .logo {
   font-size: 24px;
   font-weight: 500;
 }
+
 .menu {
   font-size: 45px;
   display: none;
 }
-@media only screen and (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
-}
+
 main {
-  padding: 0 3rem 0 3rem;
+  padding-top: 64px;
 }
+
 .home {
   height: 100vh;
   display: flex;
@@ -53,164 +64,290 @@ main {
   align-items: center;
   gap: 1rem;
   border-bottom: 2px solid #60a5fa;
+  padding: 0 3rem;
 }
+
 .kiri {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
 }
+
 .tagline {
   background-color: #111827;
   color: #60a5fa;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 6px;
+  font-size: 14px;
 }
+
 .judul {
   margin-top: 2rem;
+  margin-bottom: 1rem;
   font-size: 80px;
+  line-height: 1.05;
 }
+
 .kalimat {
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #d1d5db;
 }
+
 .tombol {
+  display: inline-block;
   font-weight: 500;
   border-radius: 6px;
-  padding: 8px;
-  border: 3px solid #111827;
+  padding: 8px 16px;
+  border: 2px solid #374151;
   color: #f9fafb;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
+
 .tombol:hover {
   background-color: #60a5fa;
   color: #111827;
+  border-color: #60a5fa;
 }
+
 .about {
   margin-left: 10px;
   background-color: #60a5fa;
   color: #111827;
+  border-color: #60a5fa;
 }
+
 .about:hover {
   background-color: #0a0f1c;
-  border: 2px solid #60a5fa;
+  border-color: #60a5fa;
   color: #60a5fa;
 }
+
 .kanan {
   width: 50%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
-.gambar {
-  width: 450px;
+
+.kanan .gambar {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 12px;
 }
+
 .aboutme {
   height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
+  padding: 0 3rem;
+  border-bottom: 2px solid #60a5fa;
 }
-.aboutmekanan {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-}
+
 .aboutmekiri {
-  width: 30%;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.aboutmekiri .gambar {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 12px;
+}
+
+.aboutmekanan {
+  width: 65%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.6rem;
 }
+
+.aboutmekanan span {
+  color: #60a5fa;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.aboutmekanan h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.aboutmekanan p {
+  color: #d1d5db;
+  line-height: 1.7;
+  margin-top: 0.2rem;
+}
+
 .keahlian {
-  margin-top: 10px;
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
+
 .listkeahlian {
-  margin-top: 10px;
   display: flex;
   gap: 10px;
   list-style: none;
+  flex-wrap: wrap;
 }
+
 .itemkeahlian {
-  border: 3px solid #111827;
+  border: 2px solid #1f2937;
   color: #60a5fa;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 6px;
+  font-size: 14px;
 }
+
 .tombolportfolio {
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 }
+
 .portfolio {
-  padding: 3rem 0;
-  border-top: 2px solid #60a5fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 3rem;
+  border-bottom: 2px solid #60a5fa;
 }
+
+.portfolio h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
 .listportfolio {
-  margin-top: 1rem;
+  margin-top: 2rem;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
+
 .itemportfolio {
   background-color: #111827;
   border-radius: 12px;
-  width: 350px;
+  flex: 1 1 280px;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
 }
+
 .portfoliothumbnail {
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 12px 12px 0 0;
 }
+
 .portfoliothumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
 }
+
+.itemportfolio:hover .portfoliothumbnail img {
+  transform: scale(1.04);
+}
+
 .caption {
-  padding: 1rem;
+  padding: 1rem 1.2rem;
   flex: 1;
 }
+
+.caption h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.caption p {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
 .contact {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  border-top: 2px solid #60a5fa;
-  padding: 4rem 0;
+  padding: 4rem 3rem;
 }
+
+.contactjudul {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
 .contactinner {
   width: 100%;
-  max-width: 480px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+
+.contactkiri {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactfoto {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid #1f2937;
+}
+
+.contactkanan {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
+  gap: 0.75rem;
 }
-.contactfoto {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-}
+
 .contactnama {
   font-size: 28px;
   font-weight: 500;
 }
+
 .contactbio {
   color: #9ca3af;
   line-height: 1.7;
 }
+
 .contactlabel {
   color: #60a5fa;
   font-size: 14px;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
+
 .listlink {
   list-style: none;
   display: flex;
@@ -218,6 +355,7 @@ main {
   gap: 1rem;
   width: 100%;
 }
+
 .itemlink a {
   display: flex;
   justify-content: space-between;
@@ -226,114 +364,179 @@ main {
   background-color: #111827;
   border-radius: 10px;
   border: 2px solid #111827;
-  transition: border 0.2s ease;
+  transition: border-color 0.2s ease;
 }
+
 .itemlink a:hover {
-  border: 2px solid #60a5fa;
+  border-color: #60a5fa;
 }
+
 .linknama {
   font-weight: 500;
   font-size: 16px;
 }
+
 .linkhandle {
   color: #60a5fa;
   font-size: 14px;
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .home,
+  .aboutme {
+    padding: 0 2rem;
+  }
+
+  .portfolio {
+    padding: 3rem 2rem;
+  }
+
   .contact {
-    padding: 3rem 0;
-    min-height: auto;
+    padding: 3rem 2rem;
   }
+
   .contactfoto {
-    width: 120px;
-    height: 120px;
+    width: 220px;
+    height: 220px;
   }
-  .contactnama {
-    font-size: 22px;
+
+  .contactinner {
+    gap: 2.5rem;
+  }
+
+  .judul {
+    font-size: 52px;
+  }
+
+  .kanan .gambar {
+    width: 300px;
+  }
+
+  .itemportfolio {
+    flex: 1 1 240px;
   }
 }
+
 @media only screen and (max-width: 768px) {
-  main {
-    padding: 0.1rem 1.2rem;
+  nav {
+    padding: 1rem 1.5rem;
   }
+
+  nav ul {
+    display: none;
+  }
+
+  main {
+    padding-top: 60px;
+  }
+
   .home {
     flex-direction: column-reverse;
-    height: auto;
-    min-height: 100vh;
-    padding-top: 90px;
-    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 1.5rem;
+    gap: 1.5rem;
   }
+
   .kiri {
     width: 100%;
-    height: 100vh;
-    justify-content: center;
     align-items: center;
     text-align: center;
   }
+
+  .judul {
+    font-size: 38px;
+  }
+
   .tagline {
     font-size: 12px;
   }
+
   .kanan {
     width: 100%;
     justify-content: center;
   }
-  .judul {
-    font-size: 42px;
+
+  .kanan .gambar {
+    width: 55%;
+    max-width: 200px;
   }
-  .gambar {
-    width: 65%;
-    max-width: 240px;
-    margin-bottom: 2rem;
-  }
+
   .aboutme {
     flex-direction: column;
-    height: auto;
-    min-height: 100vh;
-    padding: 3rem 0;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 1.5rem;
+    gap: 2rem;
   }
+
   .aboutmekiri {
     width: 100%;
-    align-items: center;
+    justify-content: center;
   }
+
+  .aboutmekiri .gambar {
+    max-width: 180px;
+  }
+
   .aboutmekanan {
     width: 100%;
+    align-items: flex-start;
   }
+
+  .aboutmekanan h1 {
+    font-size: 1.6rem;
+  }
+
+  .portfolio {
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+    justify-content: center;
+  }
+
+  .portfolio h2 {
+    text-align: center;
+  }
+
   .listportfolio {
     flex-direction: column;
     align-items: center;
   }
+
   .itemportfolio {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
   }
+
   .contact {
-    flex-direction: column;
-    padding: 3rem 0;
-    gap: 2rem;
-    min-height: auto;
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
   }
-  .contactkiri {
-    width: 100%;
-    align-items: center;
+
+  .contactjudul {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
     text-align: center;
   }
+
+  .contactinner {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
   .contactfoto {
-    max-width: 200px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
   }
+
   .contactkanan {
-    width: 100%;
+    align-items: center;
   }
-}
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .judul {
-    font-size: 52px;
-  }
-  .gambar {
-    width: 320px;
-  }
-  .itemportfolio {
-    width: calc(50% - 0.5rem);
-  }
+
   .contactnama {
     font-size: 22px;
   }
