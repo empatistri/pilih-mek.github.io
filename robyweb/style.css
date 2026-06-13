@@ -1,0 +1,875 @@
+*,
+a {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #121212;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
+#ceklis {
+  display: none;
+}
+
+nav {
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.logo a {
+  font-size: 20px;
+  font-weight: 900;
+  color: #121212;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+nav ul li a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #121212;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #0077ff;
+  border-bottom: 2px solid #0077ff;
+}
+
+.tombolmenu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.tombolmenu span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #121212;
+  border-radius: 2px;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+#ceklis:checked ~ nav .tombolmenu span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+#ceklis:checked ~ nav .tombolmenu span:nth-child(2) {
+  opacity: 0;
+}
+
+#ceklis:checked ~ nav .tombolmenu span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+#ceklis:checked ~ nav ul {
+  display: flex;
+}
+
+/* =====================
+   MAIN
+===================== */
+
+main {
+  padding-top: 64px;
+}
+
+.kecil {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #0077ff;
+}
+
+.biru {
+  color: #0077ff;
+}
+
+.garishorizontal {
+  width: 100%;
+  height: 1px;
+  background-color: #c0c0c0;
+  flex-shrink: 0;
+}
+
+/* =====================
+   TOMBOL
+===================== */
+
+.tombol {
+  display: inline-block;
+  padding: 10px 26px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.tombol.isi {
+  background-color: #0077ff;
+  color: #f1f1f1;
+  border: 2px solid #0077ff;
+}
+
+.tombol.isi:hover {
+  background-color: transparent;
+  color: #0077ff;
+}
+
+.tombol.kosong {
+  background-color: transparent;
+  color: #121212;
+  border: 2px solid #121212;
+}
+
+.tombol.kosong:hover {
+  border-color: #0077ff;
+  color: #0077ff;
+}
+
+/* =====================
+   HOME
+===================== */
+
+.home {
+  min-height: 100vh;
+  padding: 0 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.hometopbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+/* tengah: foto kiri | judul kanan */
+.hometengah {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+}
+
+.kotakkiri {
+  width: 38%;
+  flex-shrink: 0;
+  border-right: 1px solid #c0c0c0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-right: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.fotohome {
+  width: 100%;
+  height: clamp(240px, 38vw, 440px);
+  overflow: hidden;
+  border: 2px solid #121212;
+  flex-shrink: 0;
+}
+
+.fotohome img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(15%);
+  transition: filter 0.4s ease;
+}
+
+.fotohome:hover img {
+  filter: grayscale(0%);
+}
+
+.infobawahfoto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-top: 1.5rem;
+}
+
+.kalimathome {
+  font-size: clamp(13px, 1.2vw, 15px);
+  line-height: 1.8;
+  color: #121212;
+  opacity: 0.75;
+  border-left: 3px solid #0077ff;
+  padding-left: 1rem;
+}
+
+.tombolbaris {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* judul besar kanan */
+.kotakkanan {
+  flex: 1;
+  padding-left: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.judulbesar {
+  font-size: clamp(52px, 9.5vw, 120px);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  color: #121212;
+}
+
+.garisbiasa {
+  color: #c0c0c0;
+}
+
+/* nama vertikal pojok kanan bawah */
+.tagvertical {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.tagvertical span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c0c0c0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+/* stats bawah */
+.statsbaris {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.statsitem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statsangka {
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #121212;
+}
+
+.statsketerangan {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c0c0c0;
+}
+
+/* =====================
+   ABOUT ME
+===================== */
+
+.aboutme {
+  min-height: 100vh;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.aboutheader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.judulhalaman {
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: #121212;
+}
+
+.aboutisi {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.aboutfoto {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aboutfoto img {
+  width: clamp(180px, 22vw, 260px);
+  height: clamp(220px, 27vw, 320px);
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  border: 2px solid #121212;
+}
+
+.fotolabel {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fotolabel span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c0c0c0;
+}
+
+.aboutteks {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.paragrafbesar {
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #121212;
+}
+
+.paragrafbiasa {
+  font-size: clamp(13px, 1.3vw, 15px);
+  line-height: 1.8;
+  color: #121212;
+  opacity: 0.75;
+}
+
+.judulkeahlian {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #121212;
+}
+
+.listkeahlian {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.itemkeahlian {
+  padding: 6px 16px;
+  border: 1px solid #c0c0c0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #121212;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.itemkeahlian:hover {
+  border-color: #0077ff;
+  color: #0077ff;
+}
+
+/* =====================
+   MY PORTFOLIO
+===================== */
+
+.myportfolio {
+  min-height: 100vh;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.portfolioheader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.listportfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.itemportfolio {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2.5rem 0;
+  transition:
+    background-color 0.2s,
+    padding 0.2s;
+}
+
+.itemportfolio:hover {
+  background-color: #e8e8e8;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.itemportfolio.balik {
+  flex-direction: row-reverse;
+}
+
+.nomorkarya {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900;
+  color: #c0c0c0;
+  width: clamp(50px, 6vw, 80px);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.thumbnailportfolio {
+  width: clamp(180px, 24vw, 280px);
+  height: clamp(120px, 16vw, 180px);
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid #c0c0c0;
+}
+
+.thumbnailportfolio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.itemportfolio:hover .thumbnailportfolio img {
+  transform: scale(1.05);
+}
+
+.captionportfolio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.judulkarya {
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #121212;
+}
+
+.deskripsikaryaa {
+  font-size: clamp(13px, 1.2vw, 14px);
+  line-height: 1.7;
+  color: #121212;
+  opacity: 0.6;
+  max-width: 360px;
+}
+
+/* =====================
+   CONTACT ME
+===================== */
+
+.contactme {
+  min-height: 100vh;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.contactheader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactsub {
+  font-size: clamp(13px, 1.3vw, 15px);
+  line-height: 1.8;
+  color: #121212;
+  opacity: 0.6;
+  max-width: 460px;
+}
+
+.contactlist {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contactbaris {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem 0;
+  transition:
+    padding 0.2s,
+    background-color 0.2s;
+}
+
+.contactbaris:hover {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  background-color: #e8e8e8;
+}
+
+.contactkiri {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.contactnomor {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #c0c0c0;
+}
+
+.contactnama {
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #121212;
+}
+
+.contactalamat {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0077ff;
+}
+
+.contactpanah {
+  font-size: 20px;
+  font-weight: 700;
+  color: #121212;
+  transition:
+    transform 0.2s,
+    color 0.2s;
+  flex-shrink: 0;
+}
+
+.contactbaris:hover .contactpanah {
+  transform: translateX(6px);
+  color: #0077ff;
+}
+
+/* =====================
+   TABLET (769px - 1024px)
+===================== */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+
+  .home {
+    padding: 0 2rem 2rem;
+  }
+
+  .kotakkiri {
+    padding-right: 1.5rem;
+  }
+
+  .kotakkanan {
+    padding-left: 1.5rem;
+  }
+
+  .aboutme {
+    padding: 3rem 2rem;
+  }
+
+  .myportfolio {
+    padding: 3rem 2rem;
+  }
+
+  .contactme {
+    padding: 3rem 2rem;
+  }
+
+  /* clamp sudah handle sisanya otomatis */
+}
+
+/* =====================
+   MOBILE (max 768px)
+===================== */
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .tombolmenu {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #c0c0c0;
+    padding: 0.5rem 0;
+    gap: 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 0.85rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 13px;
+  }
+
+  main {
+    padding-top: 60px;
+  }
+
+  /* HOME */
+  .home {
+    padding: 0 1.5rem 2rem;
+    min-height: auto;
+    gap: 0;
+  }
+
+  .hometopbar {
+    padding: 1rem 0;
+  }
+
+  .hometengah {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .kotakkiri {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #c0c0c0;
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .fotohome {
+    height: 260px;
+  }
+
+  .kotakkanan {
+    padding-left: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .judulbesar {
+    letter-spacing: -1px;
+  }
+
+  .tagvertical {
+    display: none;
+  }
+
+  .kalimathome {
+    max-width: 100%;
+  }
+
+  .statsbaris {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    padding-top: 1rem;
+  }
+
+  /* ABOUT */
+  .aboutme {
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    min-height: auto;
+  }
+
+  .aboutisi {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .aboutfoto {
+    width: 100%;
+  }
+
+  .aboutfoto img {
+    width: 100%;
+    height: 260px;
+  }
+
+  .aboutteks {
+    min-width: unset;
+    width: 100%;
+  }
+
+  /* PORTFOLIO */
+  .myportfolio {
+    padding: 3rem 1.5rem;
+    gap: 1.5rem;
+    min-height: auto;
+  }
+
+  .itemportfolio {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .itemportfolio.balik {
+    flex-direction: column;
+  }
+
+  .itemportfolio:hover {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+
+  .thumbnailportfolio {
+    width: 100%;
+    height: 200px;
+  }
+
+  .captionportfolio {
+    width: 100%;
+  }
+
+  .deskripsikaryaa {
+    max-width: 100%;
+  }
+
+  /* CONTACT */
+  .contactme {
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  .contactbaris {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding: 1.2rem 0;
+  }
+
+  .contactbaris:hover {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+
+  .contactkiri {
+    gap: 0.8rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .contactnama {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contactalamat {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+  }
+}
