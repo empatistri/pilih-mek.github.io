@@ -1,0 +1,774 @@
+*,
+a {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2f4156;
+}
+
+body {
+  background-color: #f5efeb;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
+#ceklis {
+  display: none;
+}
+
+nav {
+  background-color: #2f4156;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.logo a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f5efeb;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+nav ul li a {
+  font-size: 12px;
+  font-weight: 600;
+  color: #c8d9e6;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+.tombolmenu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.tombolmenu span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #f5efeb;
+  border-radius: 2px;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+#ceklis:checked ~ nav .tombolmenu span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+#ceklis:checked ~ nav .tombolmenu span:nth-child(2) {
+  opacity: 0;
+}
+
+#ceklis:checked ~ nav .tombolmenu span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+#ceklis:checked ~ nav ul {
+  display: flex;
+}
+
+/* =====================
+   MAIN
+===================== */
+
+main {
+  padding-top: 58px;
+}
+
+.kecil {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #567c8d;
+}
+
+.garishorizontal {
+  width: 100%;
+  height: 1px;
+  background-color: #c8d9e6;
+  flex-shrink: 0;
+}
+
+/* =====================
+   TOMBOL
+===================== */
+
+.tombol {
+  display: inline-block;
+  padding: 10px 26px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.tombol.isi {
+  background-color: #2f4156;
+  color: #f5efeb;
+  border: 2px solid #2f4156;
+}
+
+.tombol.isi:hover {
+  background-color: #567c8d;
+  border-color: #567c8d;
+  color: #ffffff;
+}
+
+.tombol.kosong {
+  background-color: transparent;
+  color: #2f4156;
+  border: 2px solid #2f4156;
+}
+
+.tombol.kosong:hover {
+  background-color: #c8d9e6;
+  border-color: #c8d9e6;
+}
+
+/* =====================
+   HOME — editorial split
+   kiri: teks + stats di bawah
+   kanan: foto dominan, full height
+===================== */
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: #f5efeb;
+}
+
+/* KIRI — beige, teks editorial */
+.homekiri {
+  width: 48%;
+  flex-shrink: 0;
+  padding: 6rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.homekiriatas {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.homekiri .kecil {
+  color: #567c8d;
+}
+
+.judulnama {
+  font-size: clamp(52px, 6vw, 88px);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -2px;
+  color: #2f4156;
+}
+
+.kalimathome {
+  font-size: clamp(13px, 1.3vw, 15px);
+  line-height: 1.85;
+  color: #2f4156;
+  opacity: 0.75;
+  max-width: 380px;
+}
+
+.tombolbaris {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.homekanan {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 3rem 3rem 2rem;
+}
+
+.homefotobungkus {
+  width: 100%;
+  height: 100%;
+  max-height: calc(100vh - 58px - 6rem);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(47, 65, 86, 0.12);
+}
+
+.homefotobungkus img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* kardhome tidak dipakai di home, tapi dijaga agar halaman lain tidak rusak */
+.kardhome {
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-top: 3px solid #567c8d;
+}
+
+/* =====================
+   ABOUT ME — hero foto + 3 kolom bawah
+===================== */
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5efeb;
+}
+
+/* foto hero fullwidth */
+.abouthero {
+  position: relative;
+  height: clamp(320px, 55vh, 520px);
+  overflow: hidden;
+}
+
+.herofoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: brightness(0.45);
+}
+
+.herooverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.herooverlay .kecil {
+  color: #c8d9e6;
+}
+
+.herojudul {
+  font-size: clamp(42px, 7vw, 90px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  color: #ffffff;
+}
+
+.herobadge {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+
+.herobadge span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c8d9e6;
+}
+
+/* 3 kolom bawah */
+.aboutbawah {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: #ffffff;
+}
+
+.aboutkolom {
+  flex: 1;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.aboutgaris {
+  width: 1px;
+  background-color: #c8d9e6;
+  flex-shrink: 0;
+}
+
+.judulkolom {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #567c8d;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #c8d9e6;
+}
+
+.paragrafbesar {
+  font-size: clamp(15px, 1.6vw, 19px);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #2f4156;
+}
+
+.paragrafbiasa {
+  font-size: clamp(13px, 1.3vw, 15px);
+  line-height: 1.8;
+  color: #2f4156;
+  opacity: 0.8;
+}
+
+.judulkeahlian {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #567c8d;
+}
+
+.listkeahlian {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.itemkeahlian {
+  padding: 6px 14px;
+  background-color: #c8d9e6;
+  border: 1px solid #c8d9e6;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #2f4156;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.itemkeahlian:hover {
+  background-color: #567c8d;
+  border-color: #567c8d;
+  color: #ffffff;
+}
+
+.judulhalaman {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: #2f4156;
+}
+
+/* =====================
+   MY PORTFOLIO — grid kartu
+===================== */
+
+.myportfolio {
+  min-height: 100vh;
+  padding: 4rem 3rem;
+  background-color: #f5efeb;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.portfolioheader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.gridportfolio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.itemportfolio {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.itemportfolio:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(47, 65, 86, 0.15);
+}
+
+.thumbnailportfolio {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.thumbnailportfolio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.itemportfolio:hover .thumbnailportfolio img {
+  transform: scale(1.05);
+}
+
+.captionportfolio {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 3px solid #c8d9e6;
+}
+
+.nomorkarya {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #567c8d;
+}
+
+.judulkarya {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 800;
+  color: #2f4156;
+}
+
+.deskripsikaryaa {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #567c8d;
+}
+
+/* =====================
+   CONTACT ME
+===================== */
+
+.contactme {
+  min-height: 100vh;
+  background-color: #2f4156;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.contactheader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactheader .kecil {
+  color: #c8d9e6;
+}
+
+.contactheader .judulhalaman {
+  color: #ffffff;
+}
+
+.contactsub {
+  font-size: clamp(13px, 1.3vw, 15px);
+  line-height: 1.8;
+  color: #c8d9e6;
+  max-width: 460px;
+}
+
+.contactgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.kartucontact {
+  background-color: #f5efeb;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.kartucontact:hover {
+  background-color: #ffffff;
+  transform: translateY(-4px);
+}
+
+.contactnomor {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #567c8d;
+}
+
+.contactnama {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 900;
+  color: #2f4156;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contactalamat {
+  font-size: 13px;
+  color: #567c8d;
+  flex: 1;
+}
+
+.contactpanah {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2f4156;
+  transition: transform 0.2s;
+  align-self: flex-end;
+}
+
+.kartucontact:hover .contactpanah {
+  transform: translateX(4px);
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+
+  .homekiri {
+    width: 50%;
+    padding: 4rem 2.5rem 3rem;
+  }
+
+  .herooverlay {
+    padding: 2rem;
+  }
+
+  .aboutkolom {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .myportfolio {
+    padding: 3rem 2rem;
+  }
+
+  .contactme {
+    padding: 3rem 2rem;
+  }
+
+  .contactgrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .tombolmenu {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #2f4156;
+    border-bottom: 1px solid #567c8d;
+    padding: 0.5rem 0;
+    gap: 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 0.85rem 1.5rem;
+    border-bottom: 1px solid #567c8d;
+    font-size: 13px;
+  }
+
+  main {
+    padding-top: 58px;
+  }
+
+  /* HOME */
+  .home {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .homekiri {
+    width: 100%;
+    padding: 3rem 1.5rem 2.5rem;
+  }
+
+  .homekiriatas {
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .judulnama {
+    font-size: clamp(44px, 12vw, 64px);
+    letter-spacing: -1.5px;
+  }
+
+  .kalimathome {
+    max-width: 100%;
+  }
+
+  .statsbaris {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem 2rem;
+    padding-top: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .homekanan {
+    height: 340px;
+    flex: none;
+    padding: 0 1.5rem 2rem;
+    align-items: flex-end;
+  }
+
+  .homefotobungkus {
+    max-height: 100%;
+    border-radius: 12px;
+  }
+
+  /* ABOUT */
+  .abouthero {
+    height: clamp(260px, 45vh, 360px);
+  }
+
+  .herooverlay {
+    padding: 1.5rem;
+  }
+
+  .herojudul {
+    letter-spacing: -1px;
+  }
+
+  .aboutbawah {
+    flex-direction: column;
+  }
+
+  .aboutgaris {
+    width: 100%;
+    height: 1px;
+  }
+
+  .aboutkolom {
+    padding: 2rem 1.5rem;
+  }
+
+  /* PORTFOLIO */
+  .myportfolio {
+    padding: 3rem 1.5rem;
+    min-height: auto;
+  }
+
+  .gridportfolio {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  .contactme {
+    padding: 3rem 1.5rem;
+    min-height: auto;
+    gap: 2.5rem;
+  }
+
+  .contactgrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .kartucontact {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .contactnomor {
+    width: 100%;
+  }
+
+  .contactnama {
+    flex: 1;
+  }
+
+  .contactpanah {
+    align-self: center;
+  }
+}
